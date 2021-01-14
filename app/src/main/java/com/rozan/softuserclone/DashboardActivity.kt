@@ -17,7 +17,7 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        toolbar= supportActionBar!!
+//        toolbar= supportActionBar!!
         bottomNavigation=findViewById(R.id.bottomNavigation)
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         openFragment(HomeFragment())
