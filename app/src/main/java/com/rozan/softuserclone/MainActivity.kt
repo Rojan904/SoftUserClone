@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btnLogin -> {
                 if (checkEmpty()){
                     if (etUsername.text.toString() == "softwarica" && etPassword.text.toString() == "coventry") {
-//                    val intent=Intent(this,DashboardActivity::class.java)
-//                    startActivity(intent)
+                    val intent=Intent(this,DashboardActivity::class.java)
+                    startActivity(intent)
                     } else {
                         Toast.makeText(this, "Incorrect username or password.", Toast.LENGTH_SHORT).show()
                     }
