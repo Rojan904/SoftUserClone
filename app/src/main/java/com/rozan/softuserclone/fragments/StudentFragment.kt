@@ -18,6 +18,7 @@ class StudentFragment : Fragment(),View.OnClickListener {
     private lateinit var etAge:EditText
     private lateinit var rdoGender:RadioGroup
     private lateinit var etAddress:EditText
+    private lateinit var etImage:EditText
     private lateinit var btnSave: Button
     private var gender="Male"
     var fragment=Fragment()
@@ -30,6 +31,7 @@ class StudentFragment : Fragment(),View.OnClickListener {
         etAge=view.findViewById(R.id.etAge)
         rdoGender=view.findViewById(R.id.rdoGender)
         etAddress=view.findViewById(R.id.etAddress)
+        etImage=view.findViewById(R.id.etImage)
         btnSave=view.findViewById(R.id.btnSave)
 
         rdoGender.setOnCheckedChangeListener { radioGroup, id ->
@@ -53,7 +55,7 @@ class StudentFragment : Fragment(),View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0?.id){
             R.id.btnSave -> {
-                studentList.add(Student("",etName.text.toString(), etAge.text.toString().toInt(), gender, etAddress.text.toString()))
+                studentList.add(Student(etImage.text.toString(),etName.text.toString(), etAge.text.toString().toInt(), gender, etAddress.text.toString()))
 //                val bundle = Bundle()
 //                bundle.putSerializable("studentList",studentList)
 //                fragment.arguments = bundle

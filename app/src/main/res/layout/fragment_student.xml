@@ -26,9 +26,9 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
         />
     <EditText
         android:id="@+id/etAge"
@@ -39,19 +39,19 @@
         android:textColorHint="@color/black"
         android:textSize="20sp"
         android:textColor="@color/black"
-        android:layout_margin="10dp"/>
+        android:layout_margin="5dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Gender"
         android:textSize="25sp"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:textColor="@color/black"/>
     <RadioGroup
         android:id="@+id/rdoGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_margin="5dp">
         <RadioButton
             android:id="@+id/rdoMale"
             android:layout_width="wrap_content"
@@ -82,7 +82,16 @@
         android:textColorHint="@color/black"
         android:textSize="20sp"
         android:textColor="@color/black"
-        android:layout_margin="10dp"/>
+        android:layout_margin="5dp"/>
+    <EditText
+        android:id="@+id/etImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image Url"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"/>
     <Button
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
