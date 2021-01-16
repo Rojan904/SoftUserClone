@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.rozan.softuserclone.R
 import com.rozan.softuserclone.model.Student
@@ -55,10 +56,16 @@ class StudentFragment : Fragment(),View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0?.id){
             R.id.btnSave -> {
-                studentList.add(Student(etImage.text.toString(),etName.text.toString(), etAge.text.toString().toInt(), gender, etAddress.text.toString()))
+                studentList.add(Student(etImage.text.toString(), etName.text.toString(), etAge.text.toString().toInt(), gender, etAddress.text.toString()))
 //                val bundle = Bundle()
 //                bundle.putSerializable("studentList",studentList)
 //                fragment.arguments = bundle
+                Toast.makeText(context, "Student Added", Toast.LENGTH_SHORT).show()
+                etName.text.clear()
+                etAge.text.clear()
+                rdoGender.clearCheck()
+                etAddress.text.clear()
+                etImage.text.clear()
 
             }
         }
