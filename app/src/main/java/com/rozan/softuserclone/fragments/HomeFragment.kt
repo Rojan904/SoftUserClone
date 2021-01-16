@@ -11,10 +11,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rozan.softuserclone.R
 import com.rozan.softuserclone.adapter.StudentAdapter
 import com.rozan.softuserclone.model.Student
+import com.rozan.softuserclone.studentList
 
 
 class HomeFragment : Fragment() {
-    private var lstStudent = ArrayList<Student>()
+
     private lateinit var recyclerView: RecyclerView
     lateinit var mContext: Context
 
@@ -23,18 +24,22 @@ class HomeFragment : Fragment() {
         mContext = context
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
        val view=inflater.inflate(R.layout.fragment_home, container, false)
         storyRecyclerView(view)
+
+//        val bundle = this.arguments
+//        if (bundle != null) {
+//            val student= bundle.getSerializable("studentList") as ArrayList<Student>  // Key
+//            for(i in student.indices){
+//                studentList.add(Student("",student[i].fullname,student[i].age,student[i].gender,student[i].address))
+//            }
+//        }
         return view
 
 
@@ -42,7 +47,7 @@ class HomeFragment : Fragment() {
 
     private fun storyRecyclerView(view: View) {
         recyclerView = view.findViewById(R.id.recyclerView)
-        val adapter = StudentAdapter(lstStudent, mContext)
+        val adapter = StudentAdapter(studentList, mContext)
         recyclerView.layoutManager = LinearLayoutManager(mContext, RecyclerView.VERTICAL, false)
         recyclerView.adapter = adapter
 
@@ -51,7 +56,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadStudent() {
-    lstStudent.add(Student("","Rojan Stha",20,"Male","Kapan"))
+    studentList.add(Student("", "Rojan Stha", 20, "Male", "Kapan"))
+
     }
 
     companion object{
