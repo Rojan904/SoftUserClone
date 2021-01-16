@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +22,7 @@ class StudentAdapter(
         val tvAge:TextView
         val tvAddress:TextView
         val tvGender:TextView
+        val imgDelete:ImageButton
 
         init {
             imgProfile=view.findViewById(R.id.imgProfile)
@@ -28,6 +30,7 @@ class StudentAdapter(
             tvAge=view.findViewById(R.id.tvAge)
             tvAddress=view.findViewById(R.id.tvAddress)
             tvGender=view.findViewById(R.id.tvGender)
+            imgDelete=view.findViewById(R.id.imgDelete)
         }
     }
 
@@ -47,6 +50,10 @@ class StudentAdapter(
         Glide.with(context)
                 .load(student.image)
                 .into(holder.imgProfile)
+        holder.imgDelete.setOnClickListener{
+            lstStudent.removeAt(position)
+            notifyDataSetChanged()
+        }
 
 
 
