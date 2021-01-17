@@ -12,24 +12,18 @@ import com.rozan.softuserclone.R
 import com.rozan.softuserclone.adapter.StudentAdapter
 import com.rozan.softuserclone.model.Student
 import com.rozan.softuserclone.studentList
-
-
 class HomeFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     lateinit var mContext: Context
-
     override fun onAttach(context: Context) {
         super.onAttach(context!!)
         mContext = context
     }
-
-
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
        val view=inflater.inflate(R.layout.fragment_home, container, false)
         storyRecyclerView(view)
 
@@ -41,8 +35,6 @@ class HomeFragment : Fragment() {
 //            }
 //        }
         return view
-
-
     }
 
     private fun storyRecyclerView(view: View) {
@@ -51,7 +43,6 @@ class HomeFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(mContext, RecyclerView.VERTICAL, false)
         recyclerView.adapter = adapter
 
-        loadStudent()
 
     }
 

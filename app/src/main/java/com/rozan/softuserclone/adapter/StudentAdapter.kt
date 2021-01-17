@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.rozan.softuserclone.R
@@ -53,6 +54,7 @@ class StudentAdapter(
         holder.imgDelete.setOnClickListener{
             lstStudent.removeAt(position)
             notifyDataSetChanged()
+        Toast.makeText(context, "Student Deleted Successfully!", Toast.LENGTH_SHORT).show()
         }
 
 
