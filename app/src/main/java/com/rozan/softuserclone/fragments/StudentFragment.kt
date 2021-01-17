@@ -60,7 +60,7 @@ class StudentFragment : Fragment(),View.OnClickListener {
 //                val bundle = Bundle()
 //                bundle.putSerializable("studentList",studentList)
 //                fragment.arguments = bundle
-                Toast.makeText(context, "Student Added", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Student Added Successfully!", Toast.LENGTH_SHORT).show()
                 etName.text.clear()
                 etAge.text.clear()
                 rdoGender.clearCheck()
